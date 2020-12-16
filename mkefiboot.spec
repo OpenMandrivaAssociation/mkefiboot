@@ -11,7 +11,7 @@ Group:		System/Kernel and hardware
 License:	GPLv2+
 URL:		https://pagure.io/%{name}
 Source0:	https://releases.pagure.org/%{name}/%{name}-%{version}.tar.gz
-BuildRequires:	pkgconfgi(python)
+BuildRequires:	pkgconfig(python)
 BuildRequires:	efi-srpm-macros
 # No signed shim binaries yet...
 #Requires:	shim-signed
