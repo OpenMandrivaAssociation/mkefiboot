@@ -5,7 +5,7 @@
 
 Name:		mkefiboot
 Version:	31.8.0.1
-Release:	2
+Release:	3
 Summary:	Standalone mkefiboot implementation for when Lorax is unavailable
 Group:		System/Kernel and hardware
 License:	GPLv2+
@@ -19,7 +19,7 @@ Requires:	grub2-efi
 Requires:	parted
 Requires:	dmsetup
 Requires:	dosfstools
-Requires:	hfsplus-tools
+#Requires:	hfsplus-tools
 Requires:	efi-filesystem
 
 # These are the only arches OpenMandriva provides grub2-efi...
