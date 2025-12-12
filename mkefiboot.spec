@@ -5,7 +5,7 @@
 
 Name:		mkefiboot
 Version:	31.8.0.1
-Release:	4
+Release:	5
 Summary:	Standalone mkefiboot implementation for when Lorax is unavailable
 Group:		System/Kernel and hardware
 License:	GPLv2+
