@@ -12,6 +12,8 @@ License:	GPLv2+
 URL:		https://pagure.io/%{name}
 Source0:	https://releases.pagure.org/%{name}/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	efi-srpm-macros
 # No signed shim binaries yet...
 #Requires:	shim-signed
@@ -26,15 +28,15 @@ Requires:	efi-filesystem
 ExclusiveArch:  %{efi}
 
 %description
-This is a "friendly fork" standalone copy of mkefiboot that is normally part of Lorax.
+This is a friendly fork of mkefiboot, which is normally part of Lorax.
 
-This project was made for the express purpose of supporting producing EFI boot capable
-media on Linux distributions where the full Lorax software package (which requires
-Anaconda, the Red Hat/Fedora installer) would not be available.
+It builds EFI boot media where the full Lorax package is not available.
+Lorax requires Anaconda, the Fedora installer.
 
 
 %prep
 %autosetup -p1
+sed -i 's/from distutils.core import setup/from setuptools import setup/' setup.py
 
 %build
 %py3_build
